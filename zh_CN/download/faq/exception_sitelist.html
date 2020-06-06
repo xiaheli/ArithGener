@@ -1,0 +1,1298 @@
+ 
+
+
+
+
+
+
+
+
+
+
+	
+	
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xml:lang="zh-CN">
+
+<!-- Mirrored from www.java.com/zh_CN/download/faq/exception_sitelist.xml by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Jun 2020 09:13:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="Language" content="zh-CN"/>
+<meta name="ROBOTS" content="INDEX,FOLLOW"/>
+
+<title>如何配置“例外站点”列表？</title>
+
+	<meta name="description" content="说明如何使用 7u51 中引入的“‘例外站点’列表”功能"/>
+	<meta name="keywords" content="阻止，提示"/>
+<meta name="date" content="2016-04-11"/>
+
+
+
+
+	
+		
+					<meta name='oracle:JRE' content='7.0,8.0'/>
+				
+
+		<meta name="oracle:articleType" content='faq'/>		
+	
+		<link rel="stylesheet" media="all" type="text/css" href="../../../ga/css/oldcss.css%3bfilename_%3dUTF-8%27%27oldcss.css" />
+	
+		<script type='text/javascript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.commonInited||(function(){apmeum.responseStart=Number(new Date);apmeum.appKey='null';apmeum.customerId='7e2e90dc30bda';apmeum.agentId='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.agentVersionKey='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.baseCollectorUrl='https://omc-7e2e90dc30bda.eum.omc.ocp.oraclecloud.com/APMaaSCollector/external/collector?';apmeum.commonInited=true;}());</script><script src='../../../../static.oracle.com/cdn/apm/1.46.0/apmeum.js' async='async' defer='defer' crossorigin='anonymous'></script><script type='text/javascript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.dynamicInited||(function(){apmeum.sid='IQeDuN0tdc3_2bqgJM0dXcH_p-YAa9BRWpN09pHcigXu5ijKFJn1!2074988464!585465867!1591347830061';apmeum.operationId='234E7225D3521A8731CFAD52D320E307A5BAD5B7';apmeum.statusCode='200';apmeum.obs=31;apmeum.typeobs || (apmeum.typeobs={});apmeum.connectionCount=3;apmeum.connectionTimeout=2000;apmeum.rewriteRules=0;apmeum.webapp_tag='';apmeum.dynamicInited=true;}());</script><script type="text/javascript" src="../../../ga/js/popUp.js%3bfilename_%3dUTF-8%27%27popUp.js"></script>
+	 
+
+
+<link rel="stylesheet" href="../../../ga/css/ga-screen.css%3bfilename_%3dUTF-8%27%27ga-screen.css" type="text/css" media="screen" charset="utf-8"/>
+<link rel="stylesheet" href="../../../ga/css/print.css%3bfilename_%3dUTF-8%27%27print.css" type="text/css" media="print" charset="utf-8"/>
+	<script async="async" type="text/javascript" src='http://consent.trustarc.com/notice?domain=oracle.com&amp;c=teconsent&amp;js=bb&amp;noticeType=bb&amp;text=true&amp;gtm=1&amp;language=zh' crossorigin=""></script>
+	
+	<style type="text/css">
+  		#teconsent a {
+  			text-decoration: underline;
+  		}
+  
+  		#teconsent a:hover {
+  			text-decoration: none;
+  		}
+	</style>
+	
+	<script type="text/javascript">
+		try{oracle.truste.api.getConsentDecision().consentDecision;oracle.truste.api.getConsentDecision().source}catch(err){var oracle=oracle||{};oracle.truste={};oracle.truste.api={};(function(){var trusteStorageItemName="truste.eu.cookie.notice_preferences";this.getCookieName=function(){return"notice_preferences"};this.getStorageItemName=function(){return trusteStorageItemName}}).apply(oracle.truste);(function(){var trusteCommon=oracle.truste;function getCookie(cookieKey){for(var name=cookieKey+"=",cookieArray=document.cookie.split(";"),i=0;i<cookieArray.length;i++){for(var c=cookieArray[i];" "==c.charAt(0);)c=c.substring(1);if(0==c.indexOf(name))return c.substring(name.length,c.length)}return null}function getLocalStorageItem(storageKey){return"undefined"!=typeof Storage?localStorage.getItem(storageKey):null}function getTRUSTeLocalStorageValue(storageKey){var value=getLocalStorageItem(storageKey);if(null!=value){return JSON.parse(value).value}return null}this.getConsentCode=function(){var value=getTRUSTeLocalStorageValue(trusteCommon.getStorageItemName())||getCookie(trusteCommon.getCookieName());return null==value?-1:parseInt(value)+1};this.getConsentDecision=function(){var value=this.getConsentCode();if(-1==value){var text='{"consentDecision": 0, "source": "implied"}';return JSON.parse(text)}var text='{"consentDecision": '+parseInt(value)+', "source": "asserted"}';return JSON.parse(text)}}).apply(oracle.truste.api)}
+		if(oracle.truste.api.getConsentDecision().consentDecision != 1) {
+			var iTag = document.createElement("script");
+			if(location.host == "www.java.com")
+				iScript = "../../../../c.oracleinfinity.io/acs/account/wh3g12c3gg/js/java/odc6d2c.js?_ora.context=analytics:production";
+			else 
+				iScript = "../../../../c.oracleinfinity.io/acs/account/wh3g12c3gg/js/java/odc61ab.js?_ora.context=analytics:development";
+			iTag.src = iScript;
+			iTag.async = true;
+			iTag.type = 'text/javascript';
+			document.head.appendChild(iTag);
+		}
+	</script>
+	
+</head>
+
+
+
+
+	 
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+ 
+
+
+
+
+
+
+
+	 
+	
+
+
+
+
+<body>
+	<a name="top"></a>
+	
+
+			
+		
+ 
+		
+			
+			
+			
+		 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Header/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	
+		
+	
+	<div class="jvh0">
+		<a href="../../index.html" class="jvl0" title="java.com">Java.com</a>
+
+<p>
+<a href="https://www.java.com/inc/BrowserRedirect1.jsp?locale=zh_CN">下载</a>
+<a href="../help/index.html">帮助</a>
+</p>
+
+<form name="searchForm" method="get" action="https://www.oracle.com/search/results" accept-charset="utf-8" class="jvs0 jv0sv0" onsubmit="if((document.searchForm.Ntt.value == document.searchForm.Ntt.defaultValue) || (document.searchForm.Ntt.value == '')){return false;}">
+<input type="hidden" name="cat" value="javacom">
+<input type="hidden" name="Ntk" value="SI-ALL5">
+<input type="hidden" name="lang" value="zhs">
+<input type="text" size="20" maxlength="55" name="Ntt" class="bodytext" onfocus="if( this.value==this.defaultValue ) this.value='';" onblur="if( this.value=='' ) this.value=this.defaultValue;" value="搜索" title="搜索">
+<input type="image" name="submit" src="../../../ga/images/jv0_search_btn.gif%3bfilename_%3dUTF-8%27%27jv0_search_btn.gif" id="searchbtn" alt="搜索" />
+</form>
+	</div>
+	<!-- END: jWidget_C/Header/Display -->
+
+				
+	
+	
+
+
+
+
+
+	
+			
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	<div class="jvc0 jvc0v0 clearfix">
+		
+	<div class="jvc0w1 clearfix">
+	    <div style="float: right;"> 
+        	<a title='可打印版本' href="exception_sitelist118c.xml?printFriendly=true" 
+           target="printFriendlyView" onclick="openPopup('','printFriendlyView',800,650,'no',1,1,0,0,0,0); return true;"> 
+           <img src="https://www.java.com/ga/im/printer.png" width="15" height="14" alt='可打印版本' class="pfv"> </a> 
+    	</div> 		
+	
+		
+	<div class="jvc0w2">	
+	<h3><b>
+        如何配置“例外站点”列表？
+    </b></h3>
+	
+		
+	
+	
+	
+
+	
+
+	
+		<hr />
+		本文适用于:
+		<ul>
+			
+				
+			
+			
+				
+			 
+			
+				
+					<li><b>Java 版本: </b>7.0, 8.0
+					</li>
+				
+				
+		</ul>
+		<hr />
+	
+	
+		
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<p>在 Java 7 Update 51 发行版中引入了<b>“例外站点”列表</b>功能。通过将应用程序 URL 添加到例外列表中，用户可以运行通常被安全检查阻止的 Rich Internet Application (RIA)。</p>
+
+下面列出了可通过将应用程序 URL 添加到“例外站点”列表以允许应用程序运行的情况：
+<ul>
+<li>未使用可信证书颁发机构发布的证书对应用程序进行签名。</li>
+<li>应用程序在本地托管。</li>
+<li>Jar 文件不具有“权限”清单属性。</li>
+<li>使用过期证书对应用程序进行了签名。</li>
+<li>无法检查用于对应用程序进行签名的证书是否已撤销。</li></ul>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h4 class="sub">管理“例外站点”列表</h4>
+<p>
+在 <b>Java 控制面板</b>的<b>安全</b>选项卡中管理“例外站点”列表。该列表显示在选项卡中。要在列表中添加、编辑或删除 URL，请单击<b>编辑站点列表</b>。</p>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+<!-- BEGIN: jWidget_C/Raw-HTML/Display -->
+ 
+
+
+
+	 
+	 
+
+<h4 class="sub">查找 Java 控制面板</h4>
+<p>
+» <a href="https://www.java.com/zh_CN/download/help/win_controlpanel.xml">Windows</a><br/> » <a href="https://www.java.com/zh_CN/download/help/mac_controlpanel.xml">Mac OS X</a> 
+</p>
+
+<!-- END: jWidget_C/Raw-HTML/Display -->
+
+				
+	
+	
+
+
+
+
+
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h4 class="sub">添加 URL</h4>
+<ol>
+<li>单击<b>编辑站点列表</b>按钮。</li>
+<li>在“‘例外站点’列表”窗口中单击<b>添加</b>。</li>
+<li>在“位置”字段下的空字段中单击以输入 URL。<br/> URL 应该以 <code>http://</code> 或 <code>https://</code> 开头，<br/>例如 <code>http://myexample.com</code> 或 <code>https://myexample.com</code>
+</li>
+<li>单击<b>确定</b>保存输入的 URL。如果单击<strong>取消</strong>，则不保存 URL。</li>
+<li>在“安全警告”对话框中单击<b>继续</b>。</li></ol>
+
+<br/>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<div>
+<img alt="“‘例外站点’列表”窗口" src="https://www.java.com/ga/images/zh_CN/add_url.jpg"/>
+</div>
+<br/>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h5 class="sub">URL 格式</h5>
+<ul>
+<li>
+需要协议和域。<br/> 支持的协议包括 <code>FILE</code>、<code>HTTP</code> 和 <code>HTTPS</code>。推荐 <code>HTTPS</code>。如果协议不是 <code>HTTPS</code>，则将显示警告。
+</li>
+<li>仅当未使用默认端口时才需要端口号。</li>
+<li>路径是可选的。</li>
+<li>不支持通配符。<br/>
+<ul><li>如果只提供了一个域，则将允许运行来自该域的任何 RIA。一个域可以有多个条目，例如，<code>https://www.example.com</code> 和 <code>http://www.example.com</code>。
+</li>
+<li>如果路径以斜杠 (/) 结尾，例如 <code>https://www.example.com/apps/</code>，则将允许运行该目录及其任意子目录中的 RIA。如果路径并非以斜杠结尾，例如，<code>http://www.example.com/test/applet.html</code>，则只允许运行该特定 RIA。
+</li></ul>
+</li>
+</ul>
+<p>仅当您信任整个站点时才将该站点添加到“例外站点”列表中。即使指定了路径，添加可能包含其他不可信路径的站点也会带来安全风险，不建议这样操作。</p>
+<p>如果输入了无效 URL，则将在该项旁边显示错误图标。如果未在单击<strong>确定</strong>之前更正 URL，则不保存无效的 URL。</p>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h4 class="sub">编辑 URL</h4>
+<ol>
+<li>在“‘例外站点’列表”窗口中双击要编辑的 URL。</li>
+<li>对 URL 进行更改。</li>
+<li>单击<b>确定</b>保存所做更改。如果单击<strong>取消</strong>，则不保存更改。 </li>
+</ol>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h4 class="sub">删除 URL</h4>
+<ol>
+<li>在“‘例外站点’列表”窗口中单击要删除的 URL。</li>
+<li>单击<b>删除</b>。</li>
+<li>单击<b>确定</b>保存所做更改。如果单击<strong>取消</strong>，则不从列表中删除 URL。
+</li>
+</ol>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<!-- no bodytext --><hr/><span class="titleblack">相关信息</span><br><br>
+
+
+
+
+			
+		
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<p>
+<img class="alertimg" src="https://www.java.com/ga/images/ic_tipblue20x20.png"/> 如果托管小应用程序的 URL 不同于启动小应用程序的 Web 页的 URL，则<strong>您需要同时添加小应用程序的 URL 以及 Web 页的 URL。</strong>
+</p>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h6 class="sub">小应用程序和 Web 页使用不同 URL 的示例</h6>
+<p>
+对于 Yahoo Games Checkers，您需要同时输入这两个 URL（列出的 URL 会有所不同，具体取决于提供游戏的主机）</p>
+<ol>
+<li>
+http://www.games.yahoo.com<br/> 这是 Yahoo Games 域的 URL</li>
+<li>http://yog36.games.sp2.yahoo.com<br/> 这是承载游戏并且显示在已阻止应用程序的对话框中的 URL</li>
+</ol>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<!-- no bodytext --><hr/><span class="titleblack">详细技术信息</span><br><br>
+
+
+
+
+			
+		
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h5 class="sub">部署规则集</h5>
+<p>
+如果系统上安装了活动的部署规则集，则部署规则优先于“例外站点”列表。仅当默认规则适用时才考虑“例外站点”列表。有关部署规则的详细信息，请参阅<a href="http://docs.oracle.com/javase/8/docs/technotes/guides/deploy/deployment_rules.html">部署规则集</a>。
+</p>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h5 class="sub">相关信息</h5>
+» <a href="https://blogs.oracle.com/java-platform-group/entry/upcoming_exception_site_list_in">7u51 中的“例外站点”列表</a> (blogs.oracle.com)<br/> » <a href="http://docs.oracle.com/javase/8/docs/technotes/guides/deploy/exception_site_list.html">“例外站点”列表文档</a> (docs.oracle.com)<br/>
+
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+	
+
+	 
+	
+		
+	
+	
+		<hr>
+		<p><b>您可能还有兴趣关注:</b></p>
+		<ul class="bluearrows">
+			
+		        
+		        
+		         
+				<li>
+					
+
+
+
+	
+	
+	
+		
+		
+	<!--  Begin /jArticle_C/Render-Link.jsp -->
+	
+	
+	
+    
+	
+	
+	
+		 
+		 
+	
+	<a href='https://www.java.com/zh_CN/download/faq/deployment_rule.xml'>如何在企业环境中部署 Java 小应用程序</a>
+	<!--  End /jArticle_C/Render-Link.jsp -->
+
+	
+	
+	
+
+				</li>
+				
+		</ul>
+		<br/><br/>
+	
+	 	
+	
+	</div><!-- /jvc0w2  -->
+	</div><!-- /jvc0w1 clearfix -->
+		
+	
+	
+		
+		<div class="jvcs0 clearfix">
+	
+		
+		
+		
+		
+			 
+			 
+		
+	
+		<div class="spsidebar">	
+		<div class="spheader"><a href='https://www.java.com/zh_CN/download/help/index.xml'>帮助资源</a></div>
+		<ul>
+		
+		
+			
+	      		
+	   		
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="https://www.java.com/zh_CN/download/help/index_installing.xml">安装 Java</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li id="olderVersions"><a href="https://www.java.com/zh_CN/download/faq/remove_olderversions.xml">删除旧版本</a></li>
+						
+										
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="https://www.java.com/zh_CN/download/help/disable_browser.xml">禁用 Java</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="https://www.java.com/zh_CN/download/help/index_using.xml">使用 Java</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+							<li><a href="https://www.java.com/zh_CN/download/faq/index_general.xml"><b>一般问题</b></a></li>
+						
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="https://www.java.com/zh_CN/download/faq/index_mobile.xml">Mobile Java</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="https://www.java.com/zh_CN/security/">安全</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="https://www.java.com/zh_CN/download/support.jsp">支持选项</a></li>
+						
+					
+				
+				
+			
+				
+					
+		</ul>
+		</div>
+		<br>
+		
+	
+			
+		
+			
+		
+		
+		
+			
+		
+			
+	
+		</div><!--  /jvcs0 clearfix -->
+		</div><!-- /jvc0 -->
+		
+	
+	
+		
+		
+			
+	 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Footer/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	<div class="jvf0">
+		<p>
+  <a href="https://www.java.com/zh_CN/selectlanguage.jsp">选择语言</a>
+| <a href="https://www.java.com/zh_CN/about/">关于 Java</a>
+| <a href="https://www.java.com/zh_CN/download/support.jsp">支持</a>
+| <a href="https://www.java.com/zh_CN/download/faq/develop.xml">开发人员</a>
+
+<br />
+
+  <a href="http://www.oracle.com/html/privacy.html">隐私政策</a>
+|&nbsp;<a><span id='teconsent'></span></a>&nbsp;
+| <a href="http://www.oracle.com/html/terms.html">使用条款</a>
+| <a href="http://www.oracle.com/html/3party.html">商标</a>
+| <a href="https://www.java.com/zh_CN/about/disclaimer.jsp">免责声明</a>
+</p>
+
+<a href="http://www.oracle.com/" class="jvsun0">Oracle</a>
+
+	</div>
+	<!-- END: jWidget_C/Footer/Display -->
+
+				
+	
+	
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+		
+		
+			
+			
+				
+			
+		
+		<script language="JavaScript">
+		<!--
+			var s_channel="javac:Support:FAQ";
+			var s_pageName="javac:Support:FAQ:exception_sitelist.xml";
+			var s_prop19="https://www.java.com/zh_CN/download/faq/zh_javac:Support:FAQ:exception_sitelist.xml";
+			var s_charSet="UTF-8";
+		//-->
+		</script>
+		<script language="JavaScript" src="https://www.java.com/ga/js/s_code_remote.js"></script>
+		<script>
+			userAgent = navigator.userAgent;
+			userAgent = userAgent == null ? "" : userAgent.toLowerCase();
+			
+			if (userAgent.indexOf('mac') != -1){
+				document.getElementById("olderVersions").style.display = "none"
+			}
+		</script>
+	
+		
+	
+</body>
+
+<!-- Mirrored from www.java.com/zh_CN/download/faq/exception_sitelist.xml by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Jun 2020 09:13:28 GMT -->
+</html>
+
+

@@ -1,0 +1,742 @@
+ 
+
+
+
+
+
+
+
+
+
+
+	
+	
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xml:lang="zh-CN">
+
+<!-- Mirrored from www.java.com/zh_CN/download/faq/develop.xml by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Jun 2020 09:13:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="Language" content="zh-CN"/>
+<meta name="ROBOTS" content="INDEX,FOLLOW"/>
+
+<title>使用 JDK 开发 Java 程序</title>
+
+	<meta name="description" content="了解如何使用 Java 技术开发程序。 "/>
+	<meta name="keywords" content="java 编程，学习 java，编写 java 代码，j2se，sdk，javadoc，jde，jsdk，jdbc，jkd，mysql，jse，jmf，netbean，netbeans，net beans，jee，j2ee，javase，javax，javac，j2sdk，eclipse"/>
+<meta name="date" content="2014-07-30"/>
+
+		<meta name="oracle:articleType" content='faq'/>		
+	
+		<link rel="stylesheet" media="all" type="text/css" href="../../../ga/css/oldcss.css%3bfilename_%3dUTF-8%27%27oldcss.css" />
+	
+		<script type='text/javascript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.commonInited||(function(){apmeum.responseStart=Number(new Date);apmeum.appKey='null';apmeum.customerId='7e2e90dc30bda';apmeum.agentId='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.agentVersionKey='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.baseCollectorUrl='https://omc-7e2e90dc30bda.eum.omc.ocp.oraclecloud.com/APMaaSCollector/external/collector?';apmeum.commonInited=true;}());</script><script src='../../../../static.oracle.com/cdn/apm/1.46.0/apmeum.js' async='async' defer='defer' crossorigin='anonymous'></script><script type='text/javascript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.dynamicInited||(function(){apmeum.sid='996DrKgpnKzrzqcCrD5w3XiljGv63yI5Mi8vQRxzROupFOAqd8ob!2074988464!585465867!1591347030057';apmeum.operationId='234E7225D3521A8731CFAD52D320E307A5BAD5B7';apmeum.statusCode='200';apmeum.obs=31;apmeum.typeobs || (apmeum.typeobs={});apmeum.connectionCount=3;apmeum.connectionTimeout=2000;apmeum.rewriteRules=0;apmeum.webapp_tag='';apmeum.dynamicInited=true;}());</script><script type="text/javascript" src="../../../ga/js/popUp.js%3bfilename_%3dUTF-8%27%27popUp.js"></script>
+	 
+
+
+<link rel="stylesheet" href="../../../ga/css/ga-screen.css%3bfilename_%3dUTF-8%27%27ga-screen.css" type="text/css" media="screen" charset="utf-8"/>
+<link rel="stylesheet" href="../../../ga/css/print.css%3bfilename_%3dUTF-8%27%27print.css" type="text/css" media="print" charset="utf-8"/>
+	<script async="async" type="text/javascript" src='http://consent.trustarc.com/notice?domain=oracle.com&amp;c=teconsent&amp;js=bb&amp;noticeType=bb&amp;text=true&amp;gtm=1&amp;language=zh' crossorigin=""></script>
+	
+	<style type="text/css">
+  		#teconsent a {
+  			text-decoration: underline;
+  		}
+  
+  		#teconsent a:hover {
+  			text-decoration: none;
+  		}
+	</style>
+	
+	<script type="text/javascript">
+		try{oracle.truste.api.getConsentDecision().consentDecision;oracle.truste.api.getConsentDecision().source}catch(err){var oracle=oracle||{};oracle.truste={};oracle.truste.api={};(function(){var trusteStorageItemName="truste.eu.cookie.notice_preferences";this.getCookieName=function(){return"notice_preferences"};this.getStorageItemName=function(){return trusteStorageItemName}}).apply(oracle.truste);(function(){var trusteCommon=oracle.truste;function getCookie(cookieKey){for(var name=cookieKey+"=",cookieArray=document.cookie.split(";"),i=0;i<cookieArray.length;i++){for(var c=cookieArray[i];" "==c.charAt(0);)c=c.substring(1);if(0==c.indexOf(name))return c.substring(name.length,c.length)}return null}function getLocalStorageItem(storageKey){return"undefined"!=typeof Storage?localStorage.getItem(storageKey):null}function getTRUSTeLocalStorageValue(storageKey){var value=getLocalStorageItem(storageKey);if(null!=value){return JSON.parse(value).value}return null}this.getConsentCode=function(){var value=getTRUSTeLocalStorageValue(trusteCommon.getStorageItemName())||getCookie(trusteCommon.getCookieName());return null==value?-1:parseInt(value)+1};this.getConsentDecision=function(){var value=this.getConsentCode();if(-1==value){var text='{"consentDecision": 0, "source": "implied"}';return JSON.parse(text)}var text='{"consentDecision": '+parseInt(value)+', "source": "asserted"}';return JSON.parse(text)}}).apply(oracle.truste.api)}
+		if(oracle.truste.api.getConsentDecision().consentDecision != 1) {
+			var iTag = document.createElement("script");
+			if(location.host == "www.java.com")
+				iScript = "../../../../c.oracleinfinity.io/acs/account/wh3g12c3gg/js/java/odc6d2c.js?_ora.context=analytics:production";
+			else 
+				iScript = "../../../../c.oracleinfinity.io/acs/account/wh3g12c3gg/js/java/odc61ab.js?_ora.context=analytics:development";
+			iTag.src = iScript;
+			iTag.async = true;
+			iTag.type = 'text/javascript';
+			document.head.appendChild(iTag);
+		}
+	</script>
+	
+</head>
+
+
+
+
+	 
+	
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+ 
+
+
+
+
+
+
+
+	 
+	
+
+
+
+
+<body>
+	<a name="top"></a>
+	
+
+			
+		
+ 
+		
+			
+			
+			
+		 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Header/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	
+		
+	
+	<div class="jvh0">
+		<a href="../../index.html" class="jvl0" title="java.com">Java.com</a>
+
+<p>
+<a href="https://www.java.com/inc/BrowserRedirect1.jsp?locale=zh_CN">下载</a>
+<a href="../help/index.html">帮助</a>
+</p>
+
+<form name="searchForm" method="get" action="https://www.oracle.com/search/results" accept-charset="utf-8" class="jvs0 jv0sv0" onsubmit="if((document.searchForm.Ntt.value == document.searchForm.Ntt.defaultValue) || (document.searchForm.Ntt.value == '')){return false;}">
+<input type="hidden" name="cat" value="javacom">
+<input type="hidden" name="Ntk" value="SI-ALL5">
+<input type="hidden" name="lang" value="zhs">
+<input type="text" size="20" maxlength="55" name="Ntt" class="bodytext" onfocus="if( this.value==this.defaultValue ) this.value='';" onblur="if( this.value=='' ) this.value=this.defaultValue;" value="搜索" title="搜索">
+<input type="image" name="submit" src="../../../ga/images/jv0_search_btn.gif%3bfilename_%3dUTF-8%27%27jv0_search_btn.gif" id="searchbtn" alt="搜索" />
+</form>
+	</div>
+	<!-- END: jWidget_C/Header/Display -->
+
+				
+	
+	
+
+
+
+
+
+	
+			
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	<div class="jvc0 jvc0v0 clearfix">
+		
+	<div class="jvc0w1 clearfix">
+	    <div style="float: right;"> 
+        	<a title='可打印版本' href="develop118c.html?printFriendly=true" 
+           target="printFriendlyView" onclick="openPopup('','printFriendlyView',800,650,'no',1,1,0,0,0,0); return true;"> 
+           <img src="../../../ga/im/printer.png%3bfilename_%3dUTF-8%27%27printer.png" width="15" height="14" alt='可打印版本' class="pfv"> </a> 
+    	</div> 		
+	
+		
+	<div class="jvc0w2">	
+	<h3><b>
+        如何开始使用 Java 开发工具包 (JDK) 开发 Java 程序？
+    </b></h3>
+	
+		
+	
+	
+	
+
+	
+
+	
+	
+		
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<p style="margin-top: 1.5em; margin-left: 2em; border: 1px solid rgb(0, 0, 0); float: right; width: 170px; text-align: center; padding-bottom: 5px;">
+<a href="http://www.oracle.com/technetwork/java/index.html" style="text-decoration: none;"><img alt="OTN 徽标" src="../../../ga/images/O_TechnologyNetwork_clr.gif%3bfilename_%3dUTF-8%27%27O_TechnologyNetwork_clr.gif" style="text-align: center; margin: 0.02em; float: none; padding-bottom: 3px;"/><br/><span>单击以了解详细信息</span></a></p>
+
+<p style="margin-top: 2em;">
+编写 Java 小应用程序和应用程序需要类似于 JDK 的开发工具。JDK 包括 Java 运行时环境、Java 编译器和 Java API。无论是编程新手还是有经验的程序员，都很容易入门。 </p>
+<br/>
+
+
+<h5 class="sub">从何处下载 JDK？</h5>
+<p>要下载最新版本的 Java 开发工具包 (JDK)，请转到 <a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html#javasejdk">JDK 下载</a>。<br/> 开发人员还可以参阅<a href="http://www.oracle.com/technetwork/java/index.html">面向 Java 开发人员的 Oracle 技术网</a>以充分了解 Java 技术，其中包括<a href="http://www.oracle.com/technetwork/java/javase/documentation/index.html">文档</a>和<a href="http://education.oracle.com/pls/web_prod-plq-dad/ou_product_category.getFamilyPage?p_family_id=48">培训</a>。
+</p>
+
+<h5 class="sub">如果我是 Java 新用户该如何做？</h5>
+<p>如果您是 Java 新用户并有兴趣着手开发 Java 程序，请参阅 <a href="http://www.oracle.com/technetwork/topics/newtojava/overview/index.html">new to Java</a> 以找到适合初学者的有用信息。
+</p>
+
+<h5 class="sub">如何获得 Java 认证？</h5>
+<p>对于希望高薪聘请员工的雇主们来说，员工获得 Oracle Java 技术认证是技术技能、专业素养和工作进取的有力体现。Oracle 推出的 Java 技术培训和认证计划倍受业界的赞誉，可以确保学员拥有必备的技能，轻松应对 IT 公司的挑战。<br/> » 了解 <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=457&amp;get_params=pillar_id:5">Java 认证</a>详细信息
+</p>
+
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h5 class="sub"><a name="javaconf">Java 开发人员大会</a></h5>
+<ul>
+<li>JavaOne 是最重要的 Java 开发人员大会，与会者可以了解最新的 Java 技术，增进技术理解，并且可以直接向其他软件战略人员和开发人员提问。Oracle 每年都举办 JavaOne 大会，包括在旧金山举办的旗舰 JavaOne 大会和区域会议。有关即将到来的活动和地点的详细信息，请访问 <a href="http://www.oracle.com/javaone/">www.oracle.com/javaone</a>。</li>
+<li><a href="http://www.oracle.com/technetwork/community/developer-day/">Oracle 技术网开发人员日</a>是免费的 Java 开发人员实践研讨会，定期在全球召开。</li>
+<li>Oracle 还组织多项第三方 Java 技术会议和活动。要了解在您附近举行的即将到来的活动，请搜索 <a href="http://events.oracle.com/search/search?group=Events&amp;keyword=java">Oracle 活动</a>目录。</li>
+</ul>
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+				<span class="bodytext">
+			
+		
+				
+		
+			
+		
+
+
+
+
+
+
+
+
+
+
+<h5 class="sub"><a name="javamagazine">Java 期刊</a></h5>
+<p><a href="http://www.oracle.com/technetwork/java/javamagazine/">Java 期刊</a>是公开发布的数字版双月刊，是关于 Java 技术、Java 编程语言和基于 Java 的应用程序的重要知识来源，面向在工作中使用 Java 或者希望使用 Java 的人员。其中提供了有关创新 Java 应用程序、Java 技术使用方法、Java 社区新闻以及有关新 Java 书籍、会议和活动的信息。</p>
+
+
+<h5 class="sub"><a name="academy">Oracle Academy</a></h5>
+<p><a href="http://academy.oracle.com/">Oracle Academy</a> 面向中小学、职业教育和高等院校提供了用于教学的全面的软件、课程、托管技术、员工培训、支持和认证资源组合。院校可以将这些资源灵活地融入计算机科学和商业课程内，确保学生在走上工作岗位之前熟练掌握行业相关的技能。Oracle Academy 在 95 个国家/地区有 1500 万名以上的学员。Oracle Academy 近期扩展了其课程以纳入 Java。如需了解详细信息，请访问 <a href="https://academy.oracle.com/oa-web-introcs-curriculum.html">Oracle Academy Java 编程</a>。</p>
+
+
+
+
+
+			
+		
+			
+				</span>
+			
+		
+	
+	
+
+	 
+	
+		
+	
+	
+		<hr>
+		<p><b>您可能还有兴趣关注:</b></p>
+		<ul class="bluearrows">
+			
+		        
+		        
+		         
+				<li>
+					
+
+
+
+	
+	
+	
+		
+		
+	<!--  Begin /jArticle_C/Render-Link.jsp -->
+	
+	
+	
+    
+	
+	
+	
+		 
+		 
+	
+	<a href='techinfo.html'>何处可以获得 Java 技术信息</a>
+	<!--  End /jArticle_C/Render-Link.jsp -->
+
+	
+	
+	
+
+				</li>
+				
+		</ul>
+		<br/><br/>
+	
+	 	
+	
+	</div><!-- /jvc0w2  -->
+	</div><!-- /jvc0w1 clearfix -->
+		
+	
+	
+		
+		<div class="jvcs0 clearfix">
+	
+		
+		
+		
+		
+			 
+			 
+		
+	
+		<div class="spsidebar">	
+		<div class="spheader"><a href='../help/index.html'>帮助资源</a></div>
+		<ul>
+		
+		
+			
+	      		
+	   		
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="../help/index_installing.html">安装 Java</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li id="olderVersions"><a href="remove_olderversions.html">删除旧版本</a></li>
+						
+										
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="../help/disable_browser.html">禁用 Java</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="../help/index_using.html">使用 Java</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+							<li><a href="index_general.html"><b>一般问题</b></a></li>
+						
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="index_mobile.html">Mobile Java</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="../../security/index.html">安全</a></li>
+						
+					
+				
+			
+		        
+				
+				
+				
+					 
+					 
+				
+				
+								
+				
+				
+					
+						
+						
+							<li><a href="../support.html">支持选项</a></li>
+						
+					
+				
+				
+			
+				
+					
+		</ul>
+		</div>
+		<br>
+		
+	
+			
+		
+			
+		
+		
+		
+			
+		
+			
+	
+		</div><!--  /jvcs0 clearfix -->
+		</div><!-- /jvc0 -->
+		
+	
+	
+		
+		
+			
+	 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Footer/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	<div class="jvf0">
+		<p>
+  <a href="../../selectlanguage.html">选择语言</a>
+| <a href="../../about/index.html">关于 Java</a>
+| <a href="../support.html">支持</a>
+| <a href="develop.html">开发人员</a>
+
+<br />
+
+  <a href="http://www.oracle.com/html/privacy.html">隐私政策</a>
+|&nbsp;<a><span id='teconsent'></span></a>&nbsp;
+| <a href="http://www.oracle.com/html/terms.html">使用条款</a>
+| <a href="http://www.oracle.com/html/3party.html">商标</a>
+| <a href="../../about/disclaimer.html">免责声明</a>
+</p>
+
+<a href="http://www.oracle.com/" class="jvsun0">Oracle</a>
+
+	</div>
+	<!-- END: jWidget_C/Footer/Display -->
+
+				
+	
+	
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+		
+		
+			
+			
+				
+			
+		
+		<script language="JavaScript">
+		<!--
+			var s_channel="javac:Support:FAQ";
+			var s_pageName="javac:Support:FAQ:develop.xml";
+			var s_prop19="zh_javac_Support_FAQ_develop.html";
+			var s_charSet="UTF-8";
+		//-->
+		</script>
+		<script language="JavaScript" src="../../../ga/js/s_code_remote.js%3bfilename_%3dUTF-8%27%27s_code_remote.js"></script>
+		<script>
+			userAgent = navigator.userAgent;
+			userAgent = userAgent == null ? "" : userAgent.toLowerCase();
+			
+			if (userAgent.indexOf('mac') != -1){
+				document.getElementById("olderVersions").style.display = "none"
+			}
+		</script>
+	
+		
+	
+</body>
+
+<!-- Mirrored from www.java.com/zh_CN/download/faq/develop.xml by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Jun 2020 09:13:25 GMT -->
+</html>
+
+

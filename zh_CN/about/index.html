@@ -1,0 +1,409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN" xml:lang="zh-CN">
+
+<!-- Mirrored from www.java.com/zh_CN/about/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Jun 2020 09:13:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="Language" content="zh-CN"/>
+<meta name="ROBOTS" content="INDEX,FOLLOW,NOARCHIVE"/>
+
+<title>了解 Java 技术</title>
+
+	<meta name="description" content="了解为何开发人员选择 java 作为编程语言。"/>
+	<meta name="keywords" content="java 历史，Java FX"/>
+<meta name="date" content="2016-09-07"/>
+ 
+
+
+<link rel="stylesheet" href="../../ga/css/ga-screen.css%3bfilename_%3dUTF-8%27%27ga-screen.css" type="text/css" media="screen" charset="utf-8"/>
+<link rel="stylesheet" href="../../ga/css/print.css%3bfilename_%3dUTF-8%27%27print.css" type="text/css" media="print" charset="utf-8"/>
+	<script type='text/javascript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.commonInited||(function(){apmeum.responseStart=Number(new Date);apmeum.appKey='null';apmeum.customerId='7e2e90dc30bda';apmeum.agentId='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.agentVersionKey='D61F196292670F1BE5114C7D4E6FBFF69EFF516F';apmeum.baseCollectorUrl='https://omc-7e2e90dc30bda.eum.omc.ocp.oraclecloud.com/APMaaSCollector/external/collector?';apmeum.commonInited=true;}());</script><script src='../../../static.oracle.com/cdn/apm/1.46.0/apmeum.js' async='async' defer='defer' crossorigin='anonymous'></script><script type='text/javascript' charset='UTF-8' crossorigin='anonymous'>window.apmeum||(window.apmeum = {});apmeum.dynamicInited||(function(){apmeum.sid='FtFx8cGwsytjY4Q3knczFqUX7iKU5pe7DxMT8YA5YJPVpqSgUZv9!2074988464!585465867!1591049568688';apmeum.operationId='234E7225D3521A8731CFAD52D320E307A5BAD5B7';apmeum.statusCode='200';apmeum.obs=31;apmeum.typeobs || (apmeum.typeobs={});apmeum.connectionCount=3;apmeum.connectionTimeout=2000;apmeum.rewriteRules=0;apmeum.webapp_tag='';apmeum.dynamicInited=true;}());</script><script async="async" type="text/javascript" src='http://consent.trustarc.com/notice?domain=oracle.com&amp;c=teconsent&amp;js=bb&amp;noticeType=bb&amp;text=true&amp;gtm=1&amp;language=zh' crossorigin=""></script>
+	
+	<style type="text/css">
+  		#teconsent a {
+  			text-decoration: underline;
+  		}
+  
+  		#teconsent a:hover {
+  			text-decoration: none;
+  		}
+	</style>
+	
+	<script type="text/javascript">
+		try{oracle.truste.api.getConsentDecision().consentDecision;oracle.truste.api.getConsentDecision().source}catch(err){var oracle=oracle||{};oracle.truste={};oracle.truste.api={};(function(){var trusteStorageItemName="truste.eu.cookie.notice_preferences";this.getCookieName=function(){return"notice_preferences"};this.getStorageItemName=function(){return trusteStorageItemName}}).apply(oracle.truste);(function(){var trusteCommon=oracle.truste;function getCookie(cookieKey){for(var name=cookieKey+"=",cookieArray=document.cookie.split(";"),i=0;i<cookieArray.length;i++){for(var c=cookieArray[i];" "==c.charAt(0);)c=c.substring(1);if(0==c.indexOf(name))return c.substring(name.length,c.length)}return null}function getLocalStorageItem(storageKey){return"undefined"!=typeof Storage?localStorage.getItem(storageKey):null}function getTRUSTeLocalStorageValue(storageKey){var value=getLocalStorageItem(storageKey);if(null!=value){return JSON.parse(value).value}return null}this.getConsentCode=function(){var value=getTRUSTeLocalStorageValue(trusteCommon.getStorageItemName())||getCookie(trusteCommon.getCookieName());return null==value?-1:parseInt(value)+1};this.getConsentDecision=function(){var value=this.getConsentCode();if(-1==value){var text='{"consentDecision": 0, "source": "implied"}';return JSON.parse(text)}var text='{"consentDecision": '+parseInt(value)+', "source": "asserted"}';return JSON.parse(text)}}).apply(oracle.truste.api)}
+		if(oracle.truste.api.getConsentDecision().consentDecision != 1) {
+			var iTag = document.createElement("script");
+			if(location.host == "www.java.com")
+				iScript = "../../../c.oracleinfinity.io/acs/account/wh3g12c3gg/js/java/odc6d2c.js?_ora.context=analytics:production";
+			else 
+				iScript = "../../../c.oracleinfinity.io/acs/account/wh3g12c3gg/js/java/odc61ab.js?_ora.context=analytics:development";
+			iTag.src = iScript;
+			iTag.async = true;
+			iTag.type = 'text/javascript';
+			document.head.appendChild(iTag);
+		}
+	</script>
+	
+
+  <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="T79A9-GDDN2-93ZD5-M6HUR-X83QX",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,o,_,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",_=document.getElementsByTagName("script")[0],_.parentNode.insertBefore(r,_);try{o=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=r.contentWindow.document}o.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"T79A9-GDDN2-93ZD5-M6HUR-X83QX",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="hlkinlqxh7s22xw2bqua-f-ef389567f-clientnsv4-s.akamaihd.net",i={"ak.v":"27","ak.cp":"131324","ak.ai":parseInt("160235",10),"ak.ol":"0","ak.cr":286,"ak.ipv":4,"ak.proto":"","ak.rid":"e6fb7dc","ak.r":36216,"ak.a2":e,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"58.212.134.0","ak.cport":26940,"ak.gh":"23.59.250.222","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1591348264","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==swnVKVjUhL0F/6ux/idG6HuPcRAIyXZFeS9cYa5G4CU4RcSFUeyxlVG7hO2qvPM1aACWJbc3p+e/0TNZL2nOeP2sX70/M1KgG9es0j1F85ayqZsxLNCSBXJbKkDUbTksEpDmZaGTOG4JTZw2QoBiiO74trfYcP6dmzfn5Ajlw2V+3iBort/gCusc/HRXU/n3SHH5ay7AUflVdEViqKgQyIgxssSkICfk2KJUhD59sHZ1PuvoTWOc8QLcFnzZNciB+fqI5sM2Ux1xWMxjNV1FEGz2PmDaSmewLHY999kdhZyk8/42dx0ybkbePUfPIrsg7WXJv2NFmhJ0Py3jxadhAaqQ+QzEply9ITsM9AVU+XH75WVztm44x+ihHUBVPPfNYwHwaXsSe/GFLgfkr7ndPBZAm5tiQcFgHfQIoqblxPc=","ak.pv":""};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))i["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body> 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Header/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	
+		
+	
+	<div class="jvh0">
+		<a href="../index.html" class="jvl0" title="java.com">Java.com</a>
+
+<p>
+<a href="https://www.java.com/inc/BrowserRedirect1.jsp?locale=zh_CN">下载</a>
+<a href="../download/help/index.html">帮助</a>
+</p>
+
+<form name="searchForm" method="get" action="https://www.oracle.com/search/results" accept-charset="utf-8" class="jvs0 jv0sv0" onsubmit="if((document.searchForm.Ntt.value == document.searchForm.Ntt.defaultValue) || (document.searchForm.Ntt.value == '')){return false;}">
+<input type="hidden" name="cat" value="javacom">
+<input type="hidden" name="Ntk" value="SI-ALL5">
+<input type="hidden" name="lang" value="zhs">
+<input type="text" size="20" maxlength="55" name="Ntt" class="bodytext" onfocus="if( this.value==this.defaultValue ) this.value='';" onblur="if( this.value=='' ) this.value=this.defaultValue;" value="搜索" title="搜索">
+<input type="image" name="submit" src="../../ga/images/jv0_search_btn.gif%3bfilename_%3dUTF-8%27%27jv0_search_btn.gif" id="searchbtn" alt="搜索" />
+</form>
+	</div>
+	<!-- END: jWidget_C/Header/Display -->
+
+				
+	
+	
+
+
+
+
+
+				<div class="jvc0 jvc0v0 clearfix">
+					<div class="jvc0w1 clearfix">
+					<div class="jvc0w2">
+
+						
+						
+							
+						
+
+
+
+
+
+
+
+
+
+
+ 
+<!-- BEGIN: jWidget_C/Property_HTML -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+		
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+<a name="top"></a>
+<h1>了解 Java 技术</h1>
+<p>Java 是几乎所有类型的网络应用程序的基础，也是开发和提供嵌入式和移动应用程序、游戏、基于 Web 的内容和企业软件的全球标准。Java 在全球各地有超过 900 万的开发人员，使您能够高效地开发、部署和使用精彩的应用程序和服务。</p>
+<p>从笔记本电脑到数据中心，从游戏控制台到科学超级计算机，从手机到互联网，Java 无处不在！</p>
+<img alt="Java 徽标" class="logo" src="https://www.java.com/ga/images/auto/1371159372900?image=true" /> 
+<ul class='logo'><li>97% 的企业桌面运行 Java</li><li>美国有 89% 的桌面（或计算机）运行 Java</li><li>全球有 900 万 Java 开发人员</li><li>开发人员的头号选择</li><li>排名第一的部署平台</li><li>有 30 亿部移动电话运行 Java</li><li>100% 的蓝光盘播放器附带了 Java</li><li>有 50 亿张 Java 卡在使用</li><li>1.25 亿台 TV 设备运行 Java</li><li>前 5 个原始设备制造商均提供了 Java ME</li></ul>
+<br class="clear" />
+
+<h2>为何软件开发人员选择 Java</h2>
+<p>Java 已由专业的 Java 开发人员、设计师和爱好者团体进行测试、完善、扩展和验证。Java 旨在竭尽所能为最广泛的计算平台开发可移植的高性能应用程序。通过使应用程序在异构环境之间可用，企业可以提供更多的服务，提高最终用户生产力并加强沟通与协作，从而显著降低企业和消费类应用程序的拥有成本。Java 是开发人员的无价之宝，使他们可以：</p>
+<p><ul><li>在一个平台上编写软件，然后即可在几乎所有其他平台上运行</li><li>创建可在 Web 浏览器中运行并可访问可用 Web 服务的程序</li><li>开发适用于在线论坛、存储、投票、HTML 格式处理以及其他用途的服务器端应用程序</li><li>将采用 Java 语言的应用程序或服务组合在一起，构成高度定制的应用程序或服务</li><li>为移动电话、远程处理器、微控制器、无线模块、传感器、网关、消费产品及几乎其他任何电子设备编写强大而高效的应用程序</li></ul></p>
+
+<h2>软件开发人员学习 Java 的一些途径</h2>
+<p><a href='http://www.oracle.com/javaone/index.html?src=OW-J1-CE-JCOM-07292014-WWMK11054264MPP001C079' title='注册 JavaOne'><img alt='注册 JavaOne' src='https://www.java.com/ga/images/auto/1367879724423' style='float:right; margin: -0.25em 0 1em 1.2em;'/></a> 许多院校已开设了 Java 平台程序设计课程。<a href='https://academy.oracle.com/index.html'>Oracle Academy</a> 面向中小学、职业教育和高等院校提供了用于教学的全面的软件、课程、托管技术、员工培训、支持和认证资源组合，其中包括将支持数十万学生的 Java 产品。此外，开发人员还可以通过下列方法提高自己的 Java 编程技能：浏览 Oracle <a href='http://www.oracle.com/technetwork/java/'>Java 开发人员 Web 站点</a>、订阅 <a href='http://www.oracle.com/us/syndication/subscribe/'>Java 技术简报</a>和 <a href='http://www.oracle.com/technetwork/java/javamagazine/index.html'>Java 杂志</a>、使用 <a href='http://docs.oracle.com/javase/tutorial/'>Java 教程</a>和 <a href='http://www.oracle.com/technetwork/topics/newtojava/'>Java 编程中心新手入门</a>，以及报名参加 Web 课程、虚拟课程或由教师指导的<a href='http://education.oracle.com/'>课程和认证</a>。</p>
+<p><a href='http://www.oracle.com/technetwork/index.html' title='Oracle Technology Network'><img src='https://www.java.com/ga/images/auto/1371159374907' alt='OTN 徽标' style='float:right;margin:0.5em 0.8em 0.5em 1.5em;padding:0;'></a> <a href='http://www.oracle.com/technetwork/index.html'>Oracle 技术网</a>是使用行业标准技术与 Oracle 产品的应用程序开发人员、数据库管理员、系统管理员/开发人员和设计师的全球最大社区。它也是 <a href='http://www.oracle.com/technetwork/java/index.html'>java.oracle.com</a> 的主页，是 Java 技术信息的首要、完整和权威来源。您可以免费获得成员资格，<a href='http://www.oracle.com/technetwork/community/join/overview/index.html' target='_new'>立即加入！</a>（在您的配置文件中，选中“我的社区成员资格”下的“Oracle 技术网”框。）</p>
+
+<h3>年轻的开发人员学习 Java</h3>
+<p>有些年轻人从小就开始学习编程语言。Alice、Greenfoot 和 BlueJ 工具等可视教育工具可<a href='http://www.oracle.com/technetwork/topics/newtojava/youngdevelopers/index.html'>培训年轻人如何使用 Java 编程语言</a>以及为方便使用而开发的基于 Java 的语言。</p>
+
+<h3>什么是 JavaFX</h3>
+<p><strong>JavaFX 以 Java 为后盾。</strong>利用 JavaFX 平台，应用程序开发人员可以轻松创建和部署在多个平台之间运行一致的丰富 Internet 应用程序 (RIA)。JavaFX 允许开发人员在 JavaFX 应用程序中使用任意 Java 库，进一步扩展了 Java 的强大功能。开发人员既可拓展他们在 Java 方面的能力，又能充分利用 JavaFX 提供的演示技术来创建魅力无穷的视觉体验。</p>
+<p>如需进一步了解 JavaFX 技术，请访问 <a href='http://www.oracle.com/us/technologies/javafx/overview' title='JavaFX 站点'>JavaFX</a> Web 站点，查看详细信息。</p>
+<p><a href='#top'>返回页首</a></p>
+<hr>
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+<!-- END: jWidget_C/Property_HTML -->
+
+
+
+
+
+		
+					</div></div> 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+<!-- BEGIN: jWidget_C/Raw-HTML/Display -->
+ 
+
+
+
+	 
+	 
+
+<!--  jvcs0 Sidebar -->
+<div class="jvcs0 jvcs0v1 clearfix">
+<div class="jvcs0w0">
+<h4>帮助资源</h4>
+<p>
+<span class="rightarrowred">&#187;</span> <a href="../download/faq/whatis_java.html" title="什么是 Java？" >什么是 Java？</a> 
+<br />
+<span class="rightarrowred">&#187;</span> <a href="../download/faq/remove_olderversions.html" title="删除旧版本">删除旧版本</a>
+<br />
+<span class="rightarrowred">&#187;</span> <a href="../download/help/java_update.html" title="什么是 Java 更新？">什么是 Java 更新？</a>
+<br />
+<span class="rightarrowred">&#187;</span> <a href="../download/help/troubleshoot_java.html">Java 疑难解答</a>
+</p>
+<!-- LEFT COLUMN / -->
+<!-- STYLED CONTENTS / -->
+</div>
+</div>
+<!-- /jvcs0 Sidebar -->
+<!-- END: jWidget_C/Raw-HTML/Display -->
+
+				
+	
+	
+
+
+
+
+
+        		</div>
+        		<!-- /jvc0 -->
+        		<!-- /CONTENT --> 
+
+
+
+
+
+
+
+
+
+	
+		
+			
+				
+			  	
+				
+					
+						
+						
+						
+						
+													
+													
+						
+					
+				
+			
+		
+		
+		
+			
+			
+			
+	<!-- BEGIN: jWidget_C/Footer/Display -->
+	
+	
+	
+	
+		 
+		 
+	
+	<div class="jvf0">
+		<p>
+  <a href="../selectlanguage.html">选择语言</a>
+| <a href="index.html">关于 Java</a>
+| <a href="../download/support.html">支持</a>
+| <a href="../download/faq/develop.html">开发人员</a>
+
+<br />
+
+  <a href="http://www.oracle.com/html/privacy.html">隐私政策</a>
+|&nbsp;<a><span id='teconsent'></span></a>&nbsp;
+| <a href="http://www.oracle.com/html/terms.html">使用条款</a>
+| <a href="http://www.oracle.com/html/3party.html">商标</a>
+| <a href="disclaimer.html">免责声明</a>
+</p>
+
+<a href="http://www.oracle.com/" class="jvsun0">Oracle</a>
+
+	</div>
+	<!-- END: jWidget_C/Footer/Display -->
+
+				
+	
+	
+
+
+
+
+<!-- Begin SiteCatalyst code version: G.5. -->
+<script language="JavaScript">
+<!-- 
+var s_channel = "javac:Awareness"; 
+var s_pageName = "javac:About:JavaTech:Home"; 
+var s_prop19="zh_javac:About:JavaTech:Home";
+var s_prop20 = "Category_Home_Pages"; 
+//--></script> 
+<script language="JavaScript" src="https://www.java.com/js/s_code_remote.js"></script>
+<!-- End SiteCatalyst code version: G.5. --> 
+	
+
+	</body>
+
+<!-- Mirrored from www.java.com/zh_CN/about/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Jun 2020 09:13:23 GMT -->
+</html>
